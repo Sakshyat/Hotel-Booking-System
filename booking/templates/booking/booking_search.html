@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-title" style="background-image: url(/static/images/image-16.jpg);">
+  <div class="theme__container">
+      <div class="content-box">
+          <div class="content-wrapper">
+              <div class="title">
+                  <h1>Available Rooms</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="section-twenty-five">
+    <div class="theme__container">
+        <div class="row">
+            {% for room in rooms %}
+            <div class="col-lg-4">
+                <div class="kingho_block__25">
+                    <div class="image"><img src="{{ room.room_pic.url }}" alt=""></div>
+                    <div class="lower-content">
+                        <div class="pricing">$ {{ room.price }} / Night</div>
+                        <div class="icon-list">
+                            <ul>
+                                <li> <i class="flaticon-bed"></i>
+                                    <h4>Beds</h4>
+                                    <div class="text">{{ room.beds }}</div>
+                                </li>
+                                <li> <i class="flaticon-user"></i>
+                                    <h4>Capacity</h4>
+                                    <div class="text">600sqm</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>{{ room.room_type }}</h3> <a href="{% url 'room-booking' room.id %}" class="theme-btn btn-style-four"><span>Book Room</span></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+  </section>
+    {% if not rooms %}">
+        <div class="theme__container">
+            <div class="section_sub_title text-center">Search Results</div>
+            <h2 class="section_main_title text-center">Sorry! No rooms available for the given date</h2>
+        </div>
+    {% endif %}
+{% endblock content %}
+

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="page-title" style="background-image: url(/static/images/image-16.jpg);">
+    <div class="theme__container">
+        <div class="content-box">
+            <div class="content-wrapper">
+                <div class="title">
+                    <h1>Profile</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <div class="kingho_blog_default">
+    <div class="theme__container">
+        <div class="row">
+            <div>
+                <aside class="sidebar">
+                    <div class="sidebar-widget about-me">
+                        <div class="sidebar-title">
+                            <h3>About Me</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div class="image"><img src="{{ user.profile.image.url }}" alt=""></div>
+                            <h4>{{ user.first_name }} {{ user.last_name }}</h4>
+                            <ul class="social-links">
+                                <li><span class="far fa-user"></span> <small>@{{ user.username }}</small></li>
+                                <li><span class="far fa-mail-bulk"></span> <small>{{ user.email }}</small></li>
+                            </ul>
+                            <br>
+                            <div>
+                                <a href="{% url 'profile-update' %}" class="theme-btn btn-alt_s1" style="justify-content: center">
+                                    <span>Edit Profile</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+  {% endblock content %}

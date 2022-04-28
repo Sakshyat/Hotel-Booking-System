@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="page-title" style="background-image: url(/static/images/image-16.jpg);">
+    <div class="theme__container">
+        <div class="content-box">
+            <div class="content-wrapper">
+                <div class="title">
+                    <h1>Login</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="contact-section">
+    <div class="theme__container">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-lg-6">
+                <div class="image"><img src="{% static 'images/image-3.jpg' %}" alt=""></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-block">
+                    <h2 class="section_main_title mb-30">Login</h2>
+                    <div class="contact-form alt_s2">
+                        <form method="post" id="contact-form" enctype="multipart/form-data">
+                             {% csrf_token %}
+                             <div class="row">
+                                <div class="form-group col-md-6"> {{ form.username|as_crispy_field }} </div>
+                                <div class="form-group col-md-6"> {{ form.password|as_crispy_field }} </div>
+                                {% for error in form.non_field_errors %}
+                                <p style="font-size: 12px; color: red; font-weight: 100;"> {{error}} </p>
+                                {% endfor %}
+                             </div>
+                                <div class="form-group col-md-12"> <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value=""> <button class="theme-btn btn-alt_s1" type="submit" data-loading-text="Please wait..."><span>Login</span></button> </div>
+                        </form>
+                        <small class="text-muted">Don't Have an Account?<a class="ml-2" href="{% url 'register' %}">Sign Up</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

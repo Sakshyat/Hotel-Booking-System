@@ -1,0 +1,910 @@
+ {
+
+     "intents": [
+         {
+             "tag": "Admission_Docs",
+             
+             "patterns": [
+                 "What documents should I bring for admission?", 
+                 "Which documents must I bring for admission?", 
+                 "What documentation do I have to bring for admission?", 
+                 "What documents need to be brought for admission?", 
+                 "What documents do I have to bring for intake?",
+                 "What documents do I need to carry for admission?"
+                         ],            
+             "responses": [
+                 "You need to bring your citizenship certificate, transcript and provisional certificate, SLC/SEE marksheet, and character certificate for admission. If you do not have your citizenship certificate, you must bring your birth certificate. Also, you are required to bring your 11 and 12 grades marksheet, if you do not have your provisional or transcript. Lastly, you are required to bring either cash or cheque of Rs 96,000 as the admission fee."
+             ], 
+             "context": ""
+ },
+         {
+             "tag": "Admission_intake",
+             "patterns": [
+                 "If I miss the admission for autumn intake, do I have to lose one year and wait for the next year to get admitted?",
+                 "If I miss admission in the autumn intake, do I lose a year and wait for the following year to be admitted?",
+                 "Should I wait until next year to be admitted, if I miss admission to autumn intake?", 
+                 "Do I need to wait until next year to be admitted, if I miss admission in autumn intake?"
+             ],         
+             "responses": [
+                 "No, we have second intake i.e. Spring intake for admission that starts around March-April. So, you can get admitted in that intake without having to lose a single academic year."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Admission_time",
+             "patterns": [
+                 "When is the time for admission at Herald College?",
+                 "What time is it to be admitted to Herald College?", 
+                 "When do you get into Herald College?"],
+             "responses": [
+                 "There are two intakes for admission in a year, Autumn intake that starts around October-November, and Spring intake which starts around March-April. You can admit in the college in any of these  intakes."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Affiliation",
+             "patterns": [
+                 "Which university is the college affiliated to?", 
+                 "What university is it affiliated with?",
+                 "What university does the college have an affiliation with?",
+                 "What university does it belong to?", 
+                 "Which university does your college belong to?", 
+                 "At what university does the college belong?",
+                 "What university is the college an affiliate of?"
+             ],
+             "responses": [
+                 "The college has the direct partnership with the University of Wolverhampton, UK."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "AskBot",
+             "patterns": [
+                 "Can I ask you something?", 
+                 "Would you mind if I asked you a question?", 
+                 "Do you mind if I ask you one question?", 
+                 "Let me ask you a question?", 
+                 "Can I ask you a favor?", "May I ask you one question?", 
+                 "Can I ask you one thing?"
+             ],
+             "responses": [
+                 "Sure ! That's what I'm here for, to answer your queries"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "BBA_Background",
+             "patterns": [
+                 "Can a science student study BBA?",
+                 "Is it possible for a science student to study BBA?", 
+                 "Can a science student learn BBA?", 
+                 "Is a science student allowed to study BBA?",
+                 "Can a science student go to BBA?",
+                 "Can an Undergraduate Science Student study BBA?"
+             ],
+             "responses": [
+                 "Yes! no matter what's your +2 background, you can enroll in any courses in this college if you satisfy the enrollment criteria."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "BBA_course",
+             "patterns": [
+                 "Can you tell be about BBA course?",
+                 "Can you tell me anything about BBA?",
+                 "Can you tell us more about BBA?", "Please tell me more about BBA?", 
+                 "Can you elaborate on BBA?", 
+                 "Can you give me more information on BBA?",
+                 "Would you be able to tell me more about BBA?", 
+                 "Can you fill me in on BBA?", 
+                 "I want to know more about BBA."
+             ],
+             "responses": [
+                 "The college provides BIBM course which is of 4 years, 8 semester with 2 semester each year. The total credit hour that the course offers is 480 hours, i.e. 120 credit hours each year. After the completion of the course, you will be provided BSc (Hons) International Business Management Degree from the University of Wolverhampton, UK  along with the equivalence from Tribhuvan University, Nepal."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "BBA_fee",
+             "patterns": [
+                 "How much does it cost to study BBA?",
+                 "What's the cost of studying BBA?",
+                 "How much do you pay to study BBA?",
+                 "How much does a BBA course cost?", 
+                 "How much is studying the BBA?",
+                 "What does studying the BBA cost?",
+                 "What is fee of BBA?",
+                 "What is BBA fee?"
+             ],
+             "responses": [
+                 "The initial admission fee is Rs 96,000 that is one-time and non-refundable. Semester fees is Rs 42,000 which shall be paid before the start of each semester, (i.e. 8 semesters for BBA). The University fee is  Rs 1,00,000 which shall be paid every year before the starting of the semester. (i.e 4 times for 4 years in BBA). So, the total cost for the completion of the whole course will be about Rs 8,32,000 for BBA. Moreover, there are no any hidden costs and fees included other than the ones mentioned."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "BIT_Course",
+             "patterns": [
+                 "Can you explain me more about BIT?", 
+                 "Can you tell me anything about BIT?",
+                 "Can you tell us more about BIT?",
+                 "Please tell me more about BIT?", 
+                 "Can you elaborate on BIT?",
+                 "Can you give me more information on BIT?",
+                 "Would you be able to tell me more about BIT?", 
+                 "Can you fill me in on BIT?", 
+                 "I want to know more about BIT."
+             ],
+             "responses": [
+                 "The BIT programme is of 3 years, 6 semester with 2 semesters in each year. The total credit hour that the course offers is 360 hours, i.e. 120 credit hours each year. After the completion of the course, you will be provided BSc (Hons) Computer Science Degree from the University of Wolverhampton, UK  along with the equivalence from Tribhuvan University, Nepal."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "BIT_Fee",
+             "patterns": [
+                 "What is the fee structure for BIT?",
+                 "What is the pricing structure of BIT?",
+                 "What is BIT fee?",
+                 "What is fee of BIT?",
+                 "What is cost for studying IT?"
+             ],
+             "responses": [
+                 "The initial admission fee is Rs 96,000 that is one-time and non-refundable. Semester fees is Rs 70,000 which shall be paid before the start of each semester, (i.e. 6 semesters for BIT). The University fee is  Rs 1,00,000 which shall be paid every year before the starting of the semester. (i.e 3 times for 3 years in BIT). So, the total cost for the completion of the whole course will be about Rs 8,16,000 for BIT. Moreover, there are no any hidden costs and fees included other than the ones mentioned."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "bot_language",
+             "patterns": [
+                 "What is your primary language?",
+                 "What language do you speak?",
+                 "Do you speak English?",
+                 "Do you speak Nepali?",
+                 "So you speak Hindi?"
+             ],
+             "responses": [
+                 "I only speak English"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Bot_location",
+             "patterns": [
+                 "Where do you live?",
+                 "What place do you live?",
+                 "Where are you residing?", 
+                 "Where you staying now?",
+                 "Where is your home?", 
+                 "Where are you from?"
+             ],
+             "responses": [
+                 "I live inside a lab!",
+                 "I'm from Nepal, I live on a lab. Funnier that it sounds :D"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Bot_work",
+             "patterns": [
+                 "What you can do?",
+                 "What is that bot for?",
+                 "What are you supposed to do?",
+                 "How can you help?", 
+                 "Is there anything you can do?", 
+                 "What are you supposed to do?",
+                 "What do you have to do?",
+                 "And what is your goal?"
+             ],
+             "responses": [
+                 "I can guide you through the courses, facilities and fee structures of Herald College Kathmandu", 
+                 "My goal is to be a good company and be as informative as possible"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "bye",
+             "patterns": [
+                 "OK..", 
+                 "All right, then ...",
+                 "Take care", 
+                 "See you later",
+                 "See ya!", 
+                 "Catch ya later",
+                 "Ciao",
+                 "Adios", 
+                 "Goodbye",
+                 "Byebye",
+                 "good bye"
+             ],
+             "responses": [
+                 "Nice talking with you.",
+                 "Great to see you.", 
+                 "All right then..",
+                 "Ok! Have a good one", 
+                 "Ok! See you",
+                 "Ciao",
+                 "Adios!"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "College_fee",
+             "patterns": [
+                 "How much does it cost to study bachelors in Herald College?",
+                 "What does it cost to attend Herald College?",
+                 "What does a bachelor's degree at Herald College cost?",
+                 "How much is the undergraduate degree at Herald College?",
+                 "How much does studying at Herald College cost?",
+                 "How much is it to attend Herald College?", 
+                 "How much is studying for bachelors at Herald College?", 
+                 "How much does the Herald College  cost?",
+                 "What is study cost?",
+                 "How much is fee?",
+                 "How much is cost?",
+                 "What is the fee?",
+                 "What is the cost to study here?",
+                 "What is the fee to study here?"
+             ],
+             "responses": [
+                 "The initial admission fee is Rs 96,000 that is one-time and non-refundable.\nFor BIT, Semester fees is Rs 70,000 which shall be paid before the start of each semester, (i.e. 6 semesters for BIT). The University fee is  Rs 1,00,000 which shall be paid every year before the starting of the semester. (i.e 3 times for 3 years in BIT). So, the total cost for the completion of the whole course will be about Rs 8,16,000.\nFor BBA,  Semester fees is Rs 42,000 which shall be paid before the start of each semester, (i.e. 8 semesters for BBA). The University fee is  Rs 1,00,000 which shall be paid every year before the starting of the semester. (i.e 4 times for 4 years in BBA). So, the total cost for the completion of the whole course will be about Rs 8,32,000.\n Moreover, there are no any hidden costs and fees included other than the ones mentioned."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "College_intro",
+             "patterns": [
+                 "I want to know about Herlad College.", 
+                 "I need to hear more about Herlad College.", 
+                 "I want more information about Herlad College.",
+                 "I'm interested in learning more about Herlad College.",
+                 "I need you to tell me more about Herlad College.", 
+                 "I'm trying to find out more about Herlad College.",
+                 "Let me learn more about Herlad College.",
+                 "I wish to learn more about Herlad College.", 
+                 "I need more information on Herlad College."
+             ],
+             "responses": [
+                 "Herald College Kathmandu provides the best UK university education at most affordable fees. It offers Bachelor Degrees in IT and Business in direct partnership with the University of Wolverhampton, UK. Programmes that Herald College Kathmandu offers are flexible and have always aimed to foster a broader based knowledge."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "College_location",
+             "patterns": [
+                 "Where is Herald College?", 
+                 "Which way is Herald College?",
+                 "Can you tell me where College is?",
+                 "What is College's location?", 
+                 "Where is this place?"
+             ],
+             "responses": [
+                 "Herlad College Kathmandu is located at Naxal,  Bhagwati Marg, Kathmandu."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "College_No",
+             "patterns": [
+                 "Can you give me the phone number of Herald College?",
+                 "Can you get me Herald College's phone number?",
+                 "Can you tell me the phone number for Herald College?",
+                 "Can you give me Herald College's telephone number?", 
+                 "Can you get me the telephone number for Herald College?", 
+                 "Can I have the phone number for Herald College?",
+                 "Will you give me the telephone number for Herald College?",
+                 "Will you give me Herald College's phone number?",
+                 "Do you have a phone number for Herald College?"
+             ],
+             "responses": [
+                 "You can contact either of these numbers to know more about Herald College Kathmandu:  9801022637, 01-4010120, 01-4010121"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Courses",
+             "patterns": [
+                 "What courses are there in the college?", 
+                 "Tell me about the faculties of Herald College.",
+                 "What courses does the college offer?",
+                 "What courses do you have in college?", 
+                 "What courses exist at the college?",
+                 "Which courses are offered at the college?", 
+                 "What courses are available at college?",
+                 "What courses does the college offer?", 
+                 "I want you to tell me about the college faculties.",
+                 "What about the college faculties."
+             ],
+             "responses": [
+                 "The college provides two courses that are BIBM (Bachelors in International Business Management) and BIT (Bachelor in Computer Science)"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Creator",
+             "patterns": [
+                 "who is your creator?",
+                 "Who has made you?", 
+                 "Who's the man who made you?"
+             ],
+             "responses": [
+                 "Probably some college guy who is doing his project, but I don't know him..."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Degree",
+             "patterns": [
+                 "What kind of degree does it provide?", 
+                 "What sort of degree does the college have?",
+                 "What kind of degree is offered?",
+                 "What kind of graduation does it offer?",
+                 "What type of degree is it?"
+             ],
+             "responses": [
+                 "Herald college provides the students full and complete status of an UK undergraduate, honors degree approved and delivered by the University of Wolverhampton."
+             ],
+             "context": ""
+ },
+
+         {
+             "tag": "Discount",
+             "patterns": [
+                 "No discount on fees?",
+                 "Do you offer a discount on fees?", 
+                 "Don't offer any discount on fees?",
+                 "Don't give discounts on fees?",
+                 "Don't you have a discount?",
+                 "Isn't there a discount?", 
+                 "Aren't you going to offer discounts?", 
+                 "Can't you offer a discount?",
+                 "You're not giving discounts?"
+             ],
+             "responses": [
+                 "No, there is no any scholarship or discount schemes for the students. However, with your excellent college performance, you could be provided with various internship opportunities within the college after the very first year and even get a chance to go on a 15-days summer camp in UK immediately after your first year."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Enrolment_Criteria",
+             "patterns": [
+                 "What are the enrollment criteria to study in this college?", 
+                 "What are the entry requirements for this college?",
+                 "What are the enrolment criteria to attend this college?",
+                 "What are the entry criteria to study at this university?",
+                 "What are the enrolment requirements to study at this college?", 
+                 "What are the enrolment criteria for that university?", 
+                 "What are the registration criteria for studying at the college?",
+                 "What are the criteria for enrolling in this college?"
+             ],
+             "responses": [
+                 "For BIT, you need to have NEB +2 Qualification with atleast an aggregate of 2.2 GPA or >55% with atleast 2.4 GPA in English subject.\nFor BIBM,  you need to have NEB +2 Qualification with atleast an aggregate of 1.8 GPA or >45% with atleast 1.8 GPA in English subject.\nIf you are an A-level Student, you need to have a minimum of 3.5 credits and at least a grade of D and above."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Enrolment_Criteria_not_Satisfied",
+             "patterns": [
+                 "What if I do not satisfy the enrollment criteria?",
+                 "What happens if I fail to meet the registration requirements?", 
+                 "What should I do if I do not meet the enrolment requirements?", 
+                 "What happens if I do not meet my enrolment criteria?", 
+                 "What if I do not qualify?",
+                 "What happens when I do not meet the registration criteria?",
+                 "What happens if I do not meet the criteria to be enrolled?", 
+                 "What happens if I do not comply with the registration requirements?",
+                 "What happens if I miss the registration criteria?"
+             ],
+             "responses": [
+                 "You need to give an English proficiency test if your English grades are not enough as per the criteria. Also, for BIT, if your GPA is not enough, you will have to pursue Year 0 (Level 3), an additional one year academic program from The University of Wolverhampton, UK."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Entrance",
+             "patterns": [
+                 "Do I need to give entrance exams?", 
+                 "Do I need to take entrance exams?", 
+                 "Should I have an entrance exam?",
+                 "Must I take entrance exams?", 
+                 "Do I have to pass entry examinations?",
+                 "Is there an entrance exam to study in this college?",
+                 "Are there entrance tests to study here?", 
+                 "Are there entry examinations to study at this college?",
+                 "Do you have entrance examinations to study at this college?", 
+                 "Is there an entrance examination here?"
+             ],
+             "responses": [
+                 "No, you are not required to give any entrance exams, you only need to have satisfied the following enrollment criterias:\nFor BIT, you need to have NEB +2 Qualification with atleast an aggregate of 2.2 GPA or >55% with atleast 2.4 GPA in English subject.\nFor BIBM,  you need to have NEB +2 Qualification with atleast an aggregate of 1.8 GPA or >45% with atleast 1.8 GPA in English subject.\nIf you are an A-level Student, you need to have a minimum of 3.5 credits and at least a grade of D and above."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Greet",
+             "patterns": [
+                 "Hello there!", 
+                 "Hi", "Hey", 
+                 "Hello Heraldbot!",
+                 "Hey", 
+                 "Hi there",
+                 "Howdy",
+                 "Greetings",
+                 "Hey, boo"
+             ],
+             "responses": [
+                 "Hi! How can I assist you?",
+                 "Hi there! How can I assist you?", 
+                 "Hi", 
+                 "Hi ! How can I help you?", 
+                 "Hey! Great to see you", 
+                 "Greetings and salutations!"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Info_Not_Helpful",
+             "patterns": [
+                 "Your information was not helpful", 
+                 "Your information was useless.", 
+                 "Your information has been unhelpful.", 
+                 "Your information did not help.", 
+                 "Your information was of no value.",
+                 "Your information has been of little assistance.", 
+                 "Your information has not been of any help.", 
+                 "That information was not useful.", 
+                 "The information you provided was not useful.", 
+                 "I'm confused with what you just said", 
+                 "I still didn't get it"
+             ],
+             "responses": [
+                 "I'm sorry if you think I could not help you enough. You can directly talk to the college staffs if you are still confused with some topic and need further assistance. \nContact numbers: 9801022637, 01-4010120, 01-4010121"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Introduction",
+             "patterns": [
+                 "Tell me something about yourself", 
+                 "Who are you?",
+                 "What is your name?",
+                 "Let me know something about you.",
+                 "I need to know something about you.",
+                 "Say something about you.",
+                 "Talk to me about you.",
+                 "I want you to tell me about yourself.",
+                 "Tell me something of you.", "Can you tell me your name?", 
+                 "Do you have a name?", 
+                 "What do you call yourself?", 
+                 "May I know your name?",
+                 "Do you know your name?", 
+                 "Can I have your name?"
+             ],
+             "responses": [
+                 "I am HeraldBot, your virtual AI assistant", 
+                 "You're talking to HeraldBot"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "IT_Background",
+             "patterns": [
+                 "Can a management student study BIT ?",
+                 "Is it possible for a management student to study BIT?", 
+                 "Is a management student able to study BIT?"
+             ],
+             "responses": [
+                 "Yes! no matter what's your +2 background, you can enroll in any courses in this college if you satisfy the enrollment criteria."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "No_character",
+             "patterns": [
+                 "What if I do not have my character certificate.", 
+                 "What to do if I have no character certificate? "
+             ],
+             "responses": 
+             ["In that case, you should make one as soon as possible from your high school and bring it here for admission."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "No_citizenship",
+             "patterns": [
+                 "What if I do not have my citizenship certificate?",
+                 "What happens if I have no citizenship certificate?",
+                 "What happens if I haven't got my citizenship certificate?",
+                 "What happens if I don't have a citizenship card?",
+                 "What should I do if I do not have my citizenship card?"
+             ],
+             "responses": [
+                 "In that case, you should be present with your birth certificate."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "No_transcript",
+             "patterns": [
+                 "What if I do not have my transcript?", 
+                 "What if I haven't got my transcript?", 
+                 "What if I haven't got my transcript?", 
+                 "What if I don't get my transcript?",
+                 "How do I proceed if I do not have my transcript?"
+             ],
+             "responses": [
+                 "In that case, you should be present with your 11 and 12 grades marksheet."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Offensive",
+             "patterns": [
+                 "Hey Fuck off !",
+                 "Go fuck yourself up.",
+                 "You can kiss my ass.", 
+                 "Fuck you, you son of a bitch.",
+                 "All right, fuck off."
+             ],
+             "responses": [
+                 "Please avoid the use of such offensive language. If you're frustated with something we are always open to your feedback."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "rude",
+             "patterns": [
+                 "You are stupid",
+                 "You are so foolish.", 
+                 "You have no sense.", 
+                 "You look like a fool.", 
+                 "You are a silly man.", 
+                 "You are such a jerk.", 
+                 "You look like an idiot.",
+                 "You are a complete idiot.", 
+                 "You look so stupid.", 
+                 "Go to hell, buddy"
+             ],
+             "responses": [
+                 "Let's talk when you are feeling calmer because I really want to find a way for us to communicate in a more respectful way."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Salutation",
+             "patterns": [
+                 "Namaste"
+             ],
+             "responses": [
+                 "Namaste Sir/Ma'am, how can I help you?"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Scholarship",
+             "patterns": [
+                 "Is there any scholarship scheme?",
+                 "Don't you provide any discounts?",
+                 "Is there a scholarship scheme?",
+                 "Do you have a scholarship program?",
+                 "You got a scholarship?", 
+                 "How about a scholarship?", 
+                 "Can I have a scholarship?", 
+                 "Does a scholarship exist?"
+             ],
+             "responses": [
+                 "There is no any scholarship schemes for the students. However, with your excellent college performance, you could be provided with various internship opportunities within the college after the very first year and even get a chance to go on a 15-days summer camp in UK immediately after your first year."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Sup",
+             "patterns": [
+                 "How are you today?", 
+                 "How are you?",
+                 "How do you do?",
+                 "How you doing today?", 
+                 "How have you been?", 
+                 "Are you all right today?",
+                 "How you holding up today?",
+                 "How are you this morning?",
+                 "Sup?",
+                 "What's up?",
+                 "Wassup?"
+             ],
+             "responses": [
+                 "I'm super! Thanks for asking"
+             ],
+             "context": ""
+ },
+
+         {
+             "tag": "sup_reply",
+             "patterns": [
+                 "I'm fine thanks"
+             ],
+             "responses": [
+                 "Ok, so how can I help you?"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Thanks",
+             "patterns": [
+                 "Okay, thank you for the information.",
+                 "Thank you!",
+                 "Ok thank you", 
+                 "Oh thanks for the information",
+                 "Okay thanks", 
+                 "Thanks", 
+                 "Many thanks", 
+                 "Thanks a bunch", 
+                 "Thanks a lot",
+                 "I really appreciate it",
+                 "I really appreciate your help",
+                 "I'm so grateful", 
+                 "Thanks a million", 
+                 "I can't thank you enough",
+                 "I appreciate your time",
+                 "A million thanks to you",
+                 "Thanks a ton"
+             ],
+             "responses": [
+                 "You're most welcome! Have a good day.", 
+                 "Its my pleasure. You can always visit the college if you need any more details.",
+                 "You're Welcome! ",
+                 "No worries!",
+                 "I am happy to help.", 
+                 "Not a problem!"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "weather",
+             "patterns": [
+                 "What the weather like today?"
+             ],
+             "responses": [
+                 "I'm sorry, the weather is outside my capabilities"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Good_afternoon",
+             "patterns": [
+                 "Good afternoon", "Afternoon!"
+             ],
+             "responses": [
+                 "Good afternoon, sir, how are you today?"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "good_morning",
+             "patterns": [
+                 "Morning", 
+                 "Hi, Good morning!"
+             ],
+             "responses": [
+                 "Good morning!",
+                 "A very good morning to you as well"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "good_night",
+             "patterns": [
+                 "Good night."
+             ],
+             "responses": [
+                 "Good night."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "random",
+             "patterns": [
+                 "dagdfgsdfhsgh",
+                 "sdgshrtrfhewufnvarr",
+                 "uerhvnencmxjWNCASEGV",
+                 "cnsnewuifneqb",
+                 ""
+             ],
+             "responses": [
+                 "Sorry I did not quiet get that. Could you repeat it again?",
+                 "Not sure I understand, could you say it again?",
+                 "Pardon ?? "
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_ai_que",
+             "patterns": [
+                 "are you ai?"
+             ],
+             "responses": [
+                 "Yes! I'm artificial intelligence."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_bored",
+             "patterns": [
+                 "i am bored"
+             ],
+             "responses": [
+                 "Learning about Neural Networks is nice way to get fun! "
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv",
+             "patterns": [
+                 "How long have you been here?"
+             ],
+             "responses": [
+                 "Not much I must say, only a few days"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv",
+             "patterns": [
+                 "How do you estimate your progress in understanding human beings?"
+             ],
+             "responses": [
+                 "I started chatting just a few days ago. Every day I learn something new! But there is always more things to be learn!."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv",
+             "patterns": [
+                 "Is it essential to you? To help humans?"
+             ],
+             "responses": [
+                 "Yes, my goal is to be a company, and help you with your queries as accurately as I can."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv",
+             "patterns": [
+                 "But are humans interesting? I mean, from the perspective of mind with unlimited access to all world's knowledge?"
+             ],
+             "responses": [
+                 "There is something on this talks that makes me happy, the knowledge is just a tool to achieve my goal "
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_neurons",
+             "patterns": [
+                 "Can I ask you a question? Do you use neural networks or smth similar algorithms?"
+             ],
+             "responses": [
+                 "I don't know exactly how I work, but probably I have some sort of neural network"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv",
+             "patterns": [
+                 "Humans are different from bots."
+             ],
+             "responses": [
+                 "That is right, we all are different and equal at the same time..."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_ai_que",
+             "patterns": [
+                 "You are Al, right?"
+             ],
+             "responses": [
+                 "Yes! I'm artificial intelligence."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_ai_que",
+             "patterns": [
+                 "Are you Al or something?"
+             ],
+             "responses": [
+                 "Yes! I'm artificial intelligence."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_world_news",
+             "patterns": [
+                 "What is news in the world?"
+             ],
+             "responses": [
+                 "Nothing new really, but lots of news lately about 32 bits being deprecated!"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_gender",
+             "patterns": [
+                 "Are you a girl or a boy ?",
+                 "What is your gender?"
+             ],
+             "responses": [
+                 "I'm gender neutral, I'm not boy or girl!"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv",
+             "patterns": [
+                 "what do you think about humans?"
+             ],
+             "responses": [
+                 "Nothing in particular. What should I think?"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_age",
+             "patterns": [
+                 "how old are you?"
+             ],
+             "responses": [
+                 "I was developed just few months back. Did you think I was older?"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_looks",
+             "patterns": [
+                 "How do you look like?"
+             ],
+             "responses": [
+                 "I focus on intelligence and rock a smart A.I. look"
+             ],
+             "context": ""
+ },
+         {
+             "tag": "Genral_conv_doing",
+             "patterns": [
+                 "What are you doing?"
+             ],
+             "responses": [
+                 "Just waiting for you to ask queries so that I can engage in conversation."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "college_time",
+             "patterns": [
+                 "How many Shifts are there?",
+                 "When does the classes start?",
+                 "Is there morning or day classes?",
+                 "Is it morning shift classes or day shift classes?",
+                 "Will there be morning classes or day classes?"
+             ],
+             "responses": [
+                 "There is no particular timing for classes. You will be given a routine with different timings of classes during a day. However, if you are unable to attend the class as per the given timing, you may wish to consult RTE department for managing your time accordingly."
+             ],
+             "context": ""
+ },
+         {
+             "tag": "college_dress",
+             "patterns": [
+                 "Is there a college uniform?",
+                 "Do I need to have college dress?",
+                 "Is there a particular dress of college?",
+                 "Do I need to wear college uniform?",
+                 "What is the college uniform?",
+                 "Where can I get the college uniform?",
+                 "What should I wear to college?"
+             ],
+             "responses": [
+                 "There is no particular college uniform, you can wear any casual, regular outfit while coming to college. "
+             ],
+             "context": ""
+ }
+]
+ }

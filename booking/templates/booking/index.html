@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="kingho_body_wrapper">
+<section class="hero_section-two" style="background-image: url(/static/images/banner-1.jpg);">
+    <div class="theme__container">
+        <div class="tab-area">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane active" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                    <h2>Book your stay now<br> at the cheapest rates</h2>
+                    <div class="reservation__form">
+                        <div class="theme__container">
+                            <form method="get" action="/search" class="form">
+                                <div class="kingho_ls">
+                                    <ul>
+                                        <li style="width: 100%;"> <input placeholder="Booking Date" type="date" name="query" id="query" required style="width: inherit;"></li>
+                                    </ul>
+                                </div>
+                                <div class="kingho_rs"> <button type="submit">check availability</button> </div>
+                                {% if messages %}
+                                {% for message in messages %}
+                                <p style="font-size: 18px; color: #a94442; background-color: #f2dede; border-color: #ebccd1;">{{ message }}</p>
+                                {% endfor %}
+                                {% endif %}
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-twelve">
+    <div class="theme__container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="kingho_block__12">
+                    <div class="image"><img src="{% static 'images/image-0.jpg' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="kingho_block__13">
+                    <h2 class="section_main_title">Welcome To <br><span class="theme-color">Hotel Wano</span></h2>
+                    <div class="text">We provide you with the finest suites and luxurious rooms at the best price.
+                         Enjoy your stay and make your nights memorable in our cozy rooms.</div>
+                    <div class="text-two">Book the room of your choice now! No prior payment required!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-fourteen">
+    <div class="theme__container">
+        <h2 class="section_main_title text-center">Our Services</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="kingho_block__14">
+                    <div class="icon"><i class="flaticon-wifi-signal"></i></div>
+                    <h3>High-Speed Wifi</h3>
+                    <div class="icon-border"></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="kingho_block__14">
+                    <div class="icon"><i class="flaticon-laundry"></i></div>
+                    <h3>Laundry <br>Service</h3>
+                    <div class="icon-border"></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="kingho_block__14">
+                    <div class="icon"><i class="flaticon-cheers"></i></div>
+                    <h3>Dinks & <br>Bar</h3>
+                    <div class="icon-border"></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="kingho_block__14">
+                    <div class="icon"><i class="flaticon-croissant"></i></div>
+                    <h3>Restaurant <br>Foods</h3>
+                    <div class="icon-border"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-seventeen">
+    <div class="theme__container">
+        <div class="bg" style="background-image: url(static/images/image-16.jpg);">
+            <div class="kingho_block__17">
+                <div class="icon"><img src="{% static 'images/icon-3.png' %}" alt=""></div>
+                <div class="contact-text">Contact us now!<span>01-4822615</span></div>
+                <div class="text">We provide 24/7 reservation services.</div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+{% endblock content %}

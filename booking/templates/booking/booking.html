@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-title" style="background-image: url(/static/images/image-16.jpg);">
+  <div class="theme__container">
+      <div class="content-box">
+          <div class="content-wrapper">
+              <div class="title">
+                  <h1>Bookings</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="section-thirty-eight">
+  <div class="theme__container">
+   <div style="text-align: center">
+    <a href="{% url 'booking-create' %}" class="theme-btn btn-alt_s1" style="justify-content: center">
+        <span>Make Reservation</span></a>
+    </div>
+    <br>
+      {% for b in userBookings %}
+      <div class="row">
+          <div class="col-lg-4">
+              <div class="image"><img src="{{ b.room.room_pic.url }}" alt=""></div><br>
+          </div>
+          <div class="col-lg-8">
+              <div class="kingho_block__38">
+                  <div class="icon-list">
+                      <ul>
+                          <li>
+                              <h4>Check-in Date</h4>
+                              <div class="text"><i class="far fa-calendar-alt"></i> {{ b.date}}</div>
+                          </li>
+                          <li>
+                              <h4>Check-out date</h4>
+                              <div class="text"><i class="far fa-calendar-alt"></i> {{ b.check_out_date }}</div>
+                          </li>
+                          <li>
+                            <h4>Total Stay</h4>
+                            <div class="text">
+                                
+                                {{ b.days }} 
+                                
+                                {% if b.days > 1 %}
+                                nights 
+                                {% else %}
+                                night
+                                {% endif %} 
+
+                                {{ b.stay }} 
+
+                                {% if b.stay > 1 %}
+                                days 
+                                {% else %}
+                                day
+                                {% endif %}
+                            
+                            </div>
+                        </li>
+                      </ul>
+                  </div>
+                  <h3>{{ b.room.room_type }}</h3>
+                  <div class="icon-list">
+                    <ul>
+                        <li> <i class="flaticon-bed"></i>
+                            <h4>Beds</h4>
+                            <div class="text">{{ b.room.beds }}</div>
+                        </li>
+                        <li> <i class="flaticon-user"></i>
+                            <h4>Capacity</h4>
+                            <div class="text">{{ b.room.beds }} people</div>
+                        </li>
+                        <li> <i class="flaticon-air-conditioner"></i>
+                          <h4>AC</h4>
+                          <div class="text">{{ b.room.ac }}</div>
+                      </li>
+                      <li> <i class="flaticon-wifi-signal"></i>
+                          <h4>WiFi</h4>
+                          <div class="text">{{ b.room.wifi }}</div>
+                      </li>
+                    </ul>
+                </div>
+                  <div class="kingho_inner_content_box">
+                      <div class="pricing">Total: ${{ b.totalPrice }}</div>
+                      {% if b.booked_by == user %}
+                      <form action="{% url 'booking-delete' b.id %}" method="post">
+                          {% csrf_token %}
+                          <input type="hidden" name="b_id" value="{{ b.id }}" />
+                      <button type="submit" class="theme-btn btn-alt_s1 dark" onclick="return confirm('Are you sure, you want to cancel your booking?');">
+                          <span>Cancel Booking</span>
+                        </button>
+                    </form>
+                      {% endif %}
+                  </div>
+              </div>
+          </div>
+      </div>
+       {% endfor %}
+       {% if not userBookings %}
+       <div class="theme__container">
+         <h2 class="section_main_title text-center">You don't have any bookings.</h2>
+     </div>
+       {% endif %}
+  </div>
+</section>
+{% endblock content %}
+

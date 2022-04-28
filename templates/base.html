@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HOTEL WANO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/chat.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+    <div class="kingho_body_wrapper" >
+        <header class="kingho_header header-alt_s2">
+            <div class="kingho_header_middle">
+                <div class="theme__container">
+                    <div class="inner-container">
+                        <div class="left_column">
+                            <div class="logo_area">
+                                <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/logo-white.png' %}" alt=""></a></div>
+                            </div>
+                            <div class="nav-outer">
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                        <ul class="navigation">
+                                            {% url 'index' as url %}
+                                            <li {% if url == request.path %}class="current"{% endif %}><a href="{% url 'index' %}">Home</a></li>
+                                            {% url 'room-list' as url %}
+                                            <li {% if url == request.path %}class="current"{% endif %}><a href="{% url 'room-list' %}">Rooms</a></li>
+                                            {% url 'booking-list' as url %}
+                                            <li {% if url in request.path %}class="current"{% endif %}><a href="{% url 'booking-list' %}">Bookings</a></li>
+                                            {% url 'review' as url %}
+                                            <li {% if url in request.path %}class="current"{% endif %}><a href="{% url 'review' %}">Reviews</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="right_column">
+                            <div class="nav-outer">
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                        <ul class="navigation">
+                                            {% if user.is_authenticated %}
+                                            {% url 'profile' as url %}
+                                            <li {% if url in request.path %}class="current"{% endif %}><a href="{% url 'profile' %}">PROFILE</a></li>
+                                            <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+                                            {% else %}
+                                            {% url 'login' as url %}
+                                            <li {% if url == request.path %}class="current"{% endif %}><a href="{% url 'login' %}">LOGIN</a></li>
+                                            {% url 'register' as url %}
+                                            <li {% if url == request.path %}class="current"{% endif %}><a href="{% url 'register' %}">SIGN UP</a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {% block content %}{% endblock %}
+        <!-- Chatbot -->
+        <div class="chat_icon">
+            <i class="bi bi-chat-square-quote-fill" aria-hidden="true"></i>
+        </div>
+
+        <div class="chat_box">
+            <div class="chat_head">
+               <i class="fas fa-wave-square" style="float: left;"></i>
+               <span style="margin-left: 10px;"> Say hi to us!</span>
+               <i class="fas fa-wave-square" style="float: right;"></i>
+            </div>
+
+            <form class="chat_form">
+                {% csrf_token %}
+
+                <div id="chatbox">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <p class="botText"></p>
+                    </div>
+                </div>
+
+                <div id="userInput" class="row">
+                    <div class="col-md-10">
+                        <input id="text" type="text" name="msg" placeholder="Write a reply..." class="form-control">
+                        <span><button type="submit" id="send" class="btn btn-success"><i class="fas fa-paper-plane"></i></button></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Chatbot End -->
+        <footer class="kingho_footer alt_s2">
+            <div class="kingho_footer_bottom_block">
+                <div class="theme__container">
+                    <div class="wrapper_box">
+                        <div class="copyright">
+                            <div class="text">Copyright &copy; WANO. All right reserved.</div>
+                        </div>
+                        <div class="brand-logo">
+                            <div class="logo" style="float: right"><img src="{% static 'images/logo-white.png' %}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <script src="{% static 'js/chat.js' %}"></script>
+
+            <!--Chatbox Script-->
+    <script>
+        $(document).ready(function() {
+            $(".chat_form").on("submit", function(event) {
+                var rawText = $("#text").val();
+                var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                $("#text").val("");
+                $("#chatbox").append(userHtml);
+                document.getElementById("userInput").scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                });
+                $.ajax({
+                    data: {
+                        msg: rawText,
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                    },
+                    type: "POST",
+                    url: "/get",
+                }).done(function(data) {
+                    var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                    $("#chatbox").append($.parseHTML(botHtml));
+                    document.getElementById("userInput").scrollIntoView({
+                        block: "start",
+                        behavior: "smooth",
+                    });
+                });
+                event.preventDefault();
+            });
+        });
+
+    </script>
+    <!-- End Chatbox Script-->
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="page-title" style="background-image: url(/static/images/image-16.jpg);">
+  <div class="theme__container">
+      <div class="content-box">
+          <div class="content-wrapper">
+              <div class="title">
+                  <h1>Reviews</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="kingho_blog_default">
+    <div class="theme__container">
+        <div class="row">
+            <div>
+                <div class="news-kingho_block__02 update blog-single-post">
+                    <div class="kingho_inner_content_box">
+                        <div class="lower-content">
+                            <div class="comment-form">
+                                <div class="kingho_subinner_title">
+                                    <h3>Edit Review</h3>
+                                </div>
+                                <div class="contact-form">
+                                    <form method="post" id="contact-form">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-12 form-group"> {{ form|crispy }}  <i class="fas fa-edit" style="margin-top: 20px;"></i> </div>
+                                            <div class="col-md-12 form-group">
+                                                 <button href="{% url 'review' %}" class="theme-btn btn-alt_s1 dark"><span class="btn-title">Cancel</span></button>
+                                                 <button class="theme-btn btn-alt_s1" type="submit" name="submit-form"><span class="btn-title">Save Changes</span></button>
+                                             </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

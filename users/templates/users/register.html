@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="page-title" style="background-image: url(/static/images/image-16.jpg);">
+    <div class="theme__container">
+        <div class="content-box">
+            <div class="content-wrapper">
+                <div class="title">
+                    <h1>Sign Up</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section><section class="contact-section">
+    <div class="theme__container">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-lg-6">
+                <div class="image"><img src="{% static 'images/image-1.jpg' %}" alt="">
+                    <br> <br><img src="{% static 'images/image-2.jpg' %}" alt=""></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-block">
+                    <h2 class="section_main_title mb-30">Join Us Today</h2>
+                    <div class="contact-form alt_s2">
+                        <form method="post" id="contact-form" enctype="multipart/form-data">
+                             {% csrf_token %}
+                             <div class="row">
+                                <div class="form-group col-md-6"> {{ user_form.first_name|as_crispy_field }} </div>
+                                <div class="form-group col-md-6"> {{ user_form.last_name|as_crispy_field }} </div>
+                                <div class="form-group col-md-6"> {{ user_form.email|as_crispy_field }} </div>
+                                <div class="form-group col-md-6"> {{ user_form.username|as_crispy_field }} </div>
+                                <div class="form-group col-md-6"> {{ user_form.password1|as_crispy_field }} </div>
+                                <div class="form-group col-md-6"> {{ user_form.password2|as_crispy_field }} </div>
+                                <div class="form-group col-md-6"> {{ profile_form.image|as_crispy_field }} </div>
+                             </div>
+                                <div class="form-group col-md-12"> 
+                                    <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value=""> 
+                                    <button class="theme-btn btn-alt_s1" type="submit"><span>Sign Up</span></button> 
+                                </div>
+                        </form>
+                        <small class="text-muted">Already Have an Account?<a class="ml-2" href="{% url 'login' %}">Sign In</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

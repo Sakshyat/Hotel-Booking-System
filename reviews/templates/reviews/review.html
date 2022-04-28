@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="page-title" style="background-image: url(/static/images/image-16.jpg);">
+  <div class="theme__container">
+      <div class="content-box">
+          <div class="content-wrapper">
+              <div class="title">
+                  <h1>Reviews</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="kingho_blog_default">
+    <div class="theme__container">
+        <div class="row">
+            <div>
+                <div class="news-kingho_block__02 update blog-single-post">
+                    <div class="kingho_inner_content_box">
+                        <div class="lower-content">
+                            <div class="kingho_comments_box">
+                                <div class="kingho_subinner_title">
+                                    <h3>Reviews from the customers</h3>
+                                </div> <br>
+                                {% for review in reviews %}
+                                <div class="kingho_comment_wraper">
+                                    <div class="comment">
+                                        <div class="author-thumb"><img src="{{ review.author.profile.image.url }}" alt=""></div>
+                                        <div class="comment-inner">
+                                            <div class="comment-info">
+                                                <h5>{{ review.author }}</h5><span class="date">{{ review.date_posted }}</span>
+                                            </div>
+                                            <div class="text">{{ review.content }}</div>
+                                        </div>
+                                        {% if review.author == user %}
+                                        <div class="reply-btn col-lg-2">
+                                            <a href="{% url 'edit-post' review.id %}" style="color: black;">Edit</a></div>
+                                        <div class="reply-btn col-lg-1"  style="background-color: #c19d7d;"> 
+                                            <form action="{% url 'delete-post' review.id %}" method="post">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="review_id" value="{{ review.id }}" />
+                                            <button type="submit" onclick="return confirm('Are you sure, you want to delete?');" style="background-color: #c19d7d; font-weight: 500;">
+                                                <span> Delete</span>
+                                              </button>
+                                          </form>     
+                                    </div>
+                                    {% endif %}
+                                </div>                                                  
+                            </div>
+                            {% endfor %}
+                            <br><br>
+                            <div class="comment-form">
+                                <div class="kingho_subinner_title">
+                                    <h3>Post Your Comment</h3>
+                                </div>
+                                <div class="contact-form">
+                                    <form method="post" id="contact-form">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-12 form-group"> {{ form|crispy }}  <i class="fas fa-edit" style="margin-top: 20px;"></i> </div>
+                                            <div class="col-md-12 form-group"> <button class="theme-btn btn-alt_s1" type="submit" name="submit-form"><span class="btn-title">Post Comment</span></button> </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
